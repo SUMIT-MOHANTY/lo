@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio{% endblock %}</title>
+    {% block extra_head %}{% endblock %}
+    <script>
+        (function() {
+            var data = {
+                path: window.location.pathname,
+                referrer: document.referrer
+            };
+            fetch('/api/analytics/track', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data),
+                keepalive: true
+            }).catch(function() {});
+        })();
+    </script>
+</head>
+<body>
+    {% block content %}{% endblock %}
+    {% block scripts %}{% endblock %}
+</body>
+</html>

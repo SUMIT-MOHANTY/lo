@@ -1,0 +1,15 @@
+<div class="share-buttons">
+    <span class="share-label">Share:</span>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ share_url|urlencode }}" 
+       target="_blank" class="share-btn linkedin" aria-label="Share on LinkedIn">
+        <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://twitter.com/intent/tweet?url={{ share_url|urlencode }}&text={{ title|urlencode }}" 
+       target="_blank" class="share-btn twitter" aria-label="Share on Twitter">
+        <i class="fab fa-twitter"></i> Twitter
+    </a>
+    <a href="https://github.com/share?url={{ share_url|urlencode }}" 
+       target="_blank" class="share-btn github" aria-label="Share on GitHub">
+        <i class="fab fa-github"></i> GitHub
+    </a>
+</div>

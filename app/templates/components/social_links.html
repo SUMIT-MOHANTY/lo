@@ -1,0 +1,13 @@
+{% if social_links %}
+<div class="social-links">
+    {% for link in social_links %}
+    <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" 
+       class="social-link {{ link.platform }}" aria-label="{{ link.display_name }}">
+        {% if link.icon %}
+        <i class="{{ link.icon }}"></i>
+        {% endif %}
+        <span>{{ link.display_name }}</span>
+    </a>
+    {% endfor %}
+</div>
+{% endif %}

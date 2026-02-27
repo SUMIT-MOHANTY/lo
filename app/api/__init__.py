@@ -1,5 +1,11 @@
 from flask import Blueprint
-health_bp = Blueprint('health', __name__)
-status_bp = Blueprint('status', __name__)
+from app.api.health import Health_bp
+from app.api.status import Status_bp
+from app.api.social import Social_bp
 
-from app.api import health, status
+Api_bp = Blueprint('api', __name__, url_prefix='/api/v1')
+
+def register_blueprints(app):
+    app.register_blueprint(Health_bp)
+    app.register_blueprint(Status_bp)
+    app.register_blueprint(Social_bp)

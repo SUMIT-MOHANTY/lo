@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}Professional Experience & Skills{% endblock %}
+
+{% block content %}
+<section id="experience" class="section">
+    <div class="container">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2022 - Present</div>
+                <div class="timeline-content">
+                    <h3>Senior Software Developer</h3>
+                    <p class="company">Tech Solutions Inc.</p>
+                    <p>Led development of cloud-based applications serving 100K+ users. Implemented microservices architecture reducing deployment time by 40%.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2019 - 2022</div>
+                <div class="timeline-content">
+                    <h3>Software Developer</h3>
+                    <p class="company">Digital Innovations LLC</p>
+                    <p>Developed RESTful APIs and frontend applications. Collaborated with cross-functional teams to deliver features on time.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2017 - 2019</div>
+                <div class="timeline-content">
+                    <h3>Junior Developer</h3>
+                    <p class="company">StartUp Hub</p>
+                    <p>Built responsive web interfaces and assisted in backend development. Gained expertise in Python, JavaScript, and SQL.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="section bg-light">
+    <div class="container">
+        <h2>Skills Matrix</h2>
+        <div class="skills-grid">
+            <div class="skills-category">
+                <h3>Technical Skills</h3>
+                <div class="skills-list">
+                    <div class="skill-item"><span>Python</span><div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></div>
+                    <div class="skill-item"><span>JavaScript</span><div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></div>
+                    <div class="skill-item"><span>Flask/Django</span><div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></div>
+                    <div class="skill-item"><span>React</span><div class="skill-bar"><div class="skill-level" style="width:80%"></div></div></div>
+                    <div class="skill-item"><span>SQL/PostgreSQL</span><div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></div>
+                    <div class="skill-item"><span>Docker</span><div class="skill-bar"><div class="skill-level" style="width:75%"></div></div></div>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Soft Skills</h3>
+                <div class="skills-list">
+                    <div class="skill-item"><span>Team Leadership</span><div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></div>
+                    <div class="skill-item"><span>Communication</span><div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></div>
+                    <div class="skill-item"><span>Problem Solving</span><div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></div>
+                    <div class="skill-item"><span>Project Management</span><div class="skill-bar"><div class="skill-level" style="width:80%"></div></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="section">
+    <div class="container">
+        <h2>Education</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <h3>Master of Computer Science</h3>
+                <p class="school">Stanford University</p>
+                <p class="year">2017</p>
+            </div>
+            <div class="education-card">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p class="school">UC Berkeley</p>
+                <p class="year">2015</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="certifications" class="section bg-light">
+    <div class="container">
+        <h2>Certifications</h2>
+        <div class="certifications-grid">
+            <div class="cert-card">AWS Certified Solutions Architect</div>
+            <div class="cert-card">Google Cloud Professional Developer</div>
+            <div class="cert-card">Certified Kubernetes Administrator</div>
+            <div class="cert-card">PMI Project Management Professional</div>
+        </div>
+    </div>
+</section>
+{% endblock %}

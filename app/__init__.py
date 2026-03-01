@@ -1,18 +1,20 @@
-from flask import Flask
-from flask_cors import CORS
-from app.config import Config
+import os
+from flask import Flask, jsonify
 
-def create_app(config_object=None):
+def create_app():
     app = Flask(__name__)
-    CORS(app)
+    app.config['DEBUG'] = os.getenv('FLASK_DEBUG', '0') == '1'
     
-    if config_object:
-        app.config.from_object(config_object)
-    else:
-        app.config.from_object(Config)
+    @app.route('/')
+    def index():
+        return jsonify({
+            'status': 'running',
+            'message': 'Deployment Preview System API',
+            'version': '1.0.0'
+        })
     
-    from app.api import health_bp, status_bp
-    app.register_blueprint(health_bp, url_prefix='/api/v1')
-    app.register_blueprint(status_bp, url_prefix='/api/v1')
+    @app.route('/health')
+    def health():
+        return jsonify({'status': 'healthy'}), 200
     
     return app

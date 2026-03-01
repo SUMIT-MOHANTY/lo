@@ -1,5 +1,9 @@
 from flask import Blueprint
-health_bp = Blueprint('health', __name__)
-status_bp = Blueprint('status', __name__)
 
-from app.api import health, status
+def create_api_blueprints():
+    from app.api.health import health_bp
+    return [health_bp]
+
+def register_routes(app):
+    for bp in create_api_blueprints():
+        app.register_blueprint(bp)
